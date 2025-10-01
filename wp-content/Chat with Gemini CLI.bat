@@ -1,0 +1,1 @@
+start cmd.exe /k "npx https://github.com/google-gemini/gemini-cli"
