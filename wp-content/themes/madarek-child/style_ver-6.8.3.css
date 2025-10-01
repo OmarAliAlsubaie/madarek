@@ -1,0 +1,322 @@
+/*
+Theme Name: madarek Child
+Theme URI: https://madarek.promedianet.net/
+Description: Premium Architecture & Interior Design WordPress Theme
+Version: 1.0
+Author URI: http://themeforest.net/user/ThemeGoods
+License: GNU General Public License
+License URI: http://themeforest.net/licenses/regular_extended
+Text Domain: madarek
+Template: madarek
+*/
+
+@font-face {
+	font-family: 'Technica';
+	src: url('../../fonts/technica-18.ttf') format('truetype');
+}
+
+/* Arabic font */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+
+body, body * {
+    font-family: 'Technica' !important;
+}
+.glass-section{position:relative;background:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(230,242,255,.35) 100%);} 
+.glass-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:14px;box-shadow:0 8px 28px rgba(0,0,0,.12);} 
+.btn_glass{display:inline-block;padding:10px 16px;border-radius:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);text-decoration:none;transition:all .2s ease;}
+.btn_glass:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(0,0,0,.12);} 
+/* Map fixed height to match slider */
+#location_map_section .map_embed_wrapper{position:relative;}
+#location_map_section .map_embed_wrapper:before{content:"";display:block;padding-top:0;}
+#location_map_section .map_embed_wrapper iframe{height:504px;min-height:504px;}
+/* Logo sizes */
+#logo_wrapper img{max-height:48px;width:auto;}
+
+/* Liquid Glass surfaces for header/top bar/footer */
+.above_top_bar, .top_bar, #footer, .footer_bar {
+    background: rgba(255,255,255,0.55) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+.theme-dark .above_top_bar, .theme-dark .top_bar, .theme-dark #footer, .theme-dark .footer_bar {
+    background: rgba(20,25,35,0.55) !important;
+}
+#menu_wrapper, #nav_wrapper { background: transparent !important; }
+.top_bar .standard_wrapper, #footer_wrapper .standard_wrapper { position: relative; }
+
+/* Dark theme */
+.theme-dark body, body.theme-dark, .theme-dark #wrapper, .theme-dark .top_bar, .theme-dark #footer{
+    background-color:#0e1525 !important;
+    color:#e6ecff !important;
+}
+.theme-dark a{color:#c8d6ff}
+.theme-dark .glass-card{background:rgba(20,25,35,.45);border-color:rgba(255,255,255,.12);}
+.theme-dark .btn_glass{background:rgba(200,210,255,.08);border-color:rgba(255,255,255,.18);color:#e6ecff}
+
+/* RTL support */
+.rtl { direction: rtl; }
+.rtl body, .rtl body * { font-family:'Tajawal', Arial, sans-serif !important; }
+.rtl body { text-align: initial; }
+.rtl #wrapper, .rtl .page_content_wrapper, .rtl .standard_wrapper { overflow-x: hidden; }
+.rtl .nav_wrapper_inner, .rtl #menu_wrapper .nav, .rtl #nav_wrapper { float: none; }
+.rtl #menu_wrapper .nav > li { float: right; }
+.rtl #menu_wrapper .nav li ul.sub-menu { left: auto; right: 0; text-align: right; }
+.rtl .sub-menu .sub-menu { right: 100%; left: auto; }
+.rtl .elementor-section, .rtl .elementor-container, .rtl .elementor-column, .rtl .elementor-widget { direction: rtl; }
+.rtl .rev_slider_wrapper, .rtl rs-module { direction: rtl; }
+.rtl .elementor .swiper, .rtl .elementor .swiper-wrapper { direction: rtl; }
+.rtl .map_embed_wrapper iframe { direction: rtl; }
+.rtl .glass-section { direction: rtl; }
+.rtl #menu_wrapper .nav > li { float:right; }
+.rtl .sub-menu { text-align:right; }
+
+/* Utility toolbar */
+.floating-toolbar{position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;gap:8px}
+.floating-toolbar .btn_glass{padding:8px 12px}
+.survoltextwhite:hover *{
+	color:#fff !important;
+}
+
+
+
+.hiddensliderblock{
+	position: relative;
+    opacity: 0;
+}
+.ourslide:hover .hiddensliderblock{
+	opacity: 1;
+	animation: moveUp 2s ease-in-out ;
+	position:relative;
+	top:160px;
+}
+.ourslide:hover .hiddensliderblockdefault{
+	opacity: 0;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveIn {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+.titreh2fleche h2{
+	padding-right:20px;
+}
+.titreh2fleche h2:after{
+	content: url('../../uploads/2024/06/flechedroite-1.png');
+}
+
+.ourObjslide:hover .hiddensliderblock{
+	opacity: 1;
+	animation: moveUp 2s ease-in-out ;
+	position:relative;
+	top:276px;
+}
+.ourObjslide:hover .hiddensliderblockdefault{
+	opacity: 0;
+}
+
+.ourServslide:hover .hiddensliderblockdefault{
+	opacity: 0;
+}
+
+.ourServslide:hover .hiddensliderblock{
+	opacity: 1;
+	animation: moveUp 2s ease-in-out ;
+	position:relative;
+	top:0px;
+}
+@keyframes moveLeft {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.listeourser li{
+	display:inline;
+	padding:0 50px;
+}
+
+.listeourser li:hover{
+	color:#00abeb
+}
+
+.hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease, opacity 1s ease;
+    opacity: 0;
+}
+
+.visible {
+    max-height: 200px; /* Ajustez en fonction de la hauteur du contenu */
+    opacity: 1;
+}
+
+#animated-span {
+    cursor: pointer;
+    transition: transform 2.3s ease, color 2.3s ease, opacity 2.3s ease;
+}
+
+#animated-span.clicked {
+    transform: scale(1.2);
+    color: red;
+    opacity: 0;
+}
+
+#bgcoloranimated {
+    transition: background-color 1s ease;
+}
+
+#bgcoloranimated.bg-color-change {
+    background-color: #4b4c4c; /* Couleur de fond souhaitée */
+}
+#bgcoloranimated.bg-color-change *{
+	color:#fff !important;
+}
+
+
+
+
+
+.title-icon {
+    position: absolute;
+    bottom: -140px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+
+.description {
+    opacity: 0;
+    transform: translateY(160px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.hover-block:hover {
+   /*  background-color: red; */
+}
+
+.hover-block:hover .title-icon {
+    transform: translateY(-200%);
+}
+
+.hover-block:hover .description {
+    opacity: 1;
+    transform: translateY(280);
+}
+
+.icon {
+    margin-right: 0px;
+    width: 80px;
+    vertical-align: middle;
+}
+
+.icon.down {
+    display: inline;
+}
+
+.icon.up {
+    display: none;
+}
+
+.hover-block:hover .icon.down {
+    display: none;
+}
+
+.hover-block:hover .icon.up {
+    display: inline;
+}
+
+.hover-block h1{
+	color: #FFFFFF;
+    font-size: 59px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+.fade-in {
+    opacity: 0.1;
+    transition: opacity 3s;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.number-container h2{
+            position: relative;
+			top:30px;
+            transition: transform 3s, opacity 3s;
+			font-size: 129px !important;
+        }
+        .number-container h2::after {
+            content: url('../../uploads/2024/06/flechedroite-1.png');
+        }
+        .text-below {
+            position: absolute;
+            bottom: -50px;
+            opacity: 0;
+            transition: opacity 1s, bottom 1s;
+        }
+		
+		
+		
+		
+
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tab-button.active {
+            font-weight: bold;
+        }
+.section_hei80{
+	height: 80vh !important;
+}
+
+
+/* Initial state for fade-left and fade-right */
+.fade-left, .fade-right {
+    opacity: 0.1;
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.fade-left {
+    transform: translateX(-20px); /* Hidden off to the left */
+}
+
+.fade-right {
+    transform: translateX(20px); /* Hidden off to the right */
+}
+
+/* Animation for fade-left */
+.fade-left.visible {
+    opacity: 1;
+    transform: translateX(0); /* Moves to original position */
+}
+
+/* Animation for fade-right */
+.fade-right.visible {
+    opacity: 1;
+    transform: translateX(0); /* Moves to original position */
+}
